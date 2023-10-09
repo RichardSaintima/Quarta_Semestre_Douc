@@ -1,20 +1,69 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Principal
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  
+  <ion-item>
+    <ion-label position="floating">Ingresar Algo</ion-label>
+    <ion-input type="name"  [(ngModel)]="numero1" class="ion-padding"></ion-input>
+  </ion-item>
+  <br>
+
+  <ion-button  (click)="abrirSegundaPagina()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="arrow-redo-outline"></ion-icon>
+    Uso de método navigate
+  </ion-button>
+
+  <ion-button (click)="abrirSegundaPagina2()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="arrow-redo-outline"></ion-icon>
+    Uso de navigate by URL
+  </ion-button>
+
+  <ion-button (click)="abrirSegundaPagina3()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="arrow-redo-outline"></ion-icon>
+    Enviar valor por parametro
+  </ion-button>
+
+  <br>
+
+  <ion-item expand="block">
+    <a href="segunda/1500">
+      <ion-label>Valor enviado por la url</ion-label>
+    </a>    
+  </ion-item>
+
+
+
+  <h1>Listado de usuarios</h1>
+
+  <ion-item expand="block">
+    <a href="tercera">
+      <ion-label>Ver listado de usuarios</ion-label>
+    </a>    
+  </ion-item>
+  <a href="tercera"></a>
+
+  <br>
+  
+  <ion-button routerLink="/cuarta" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="arrow-redo-outline"></ion-icon>
+    Uso de Storage
+  </ion-button>
+
+  <br>
+  
+  <ion-button routerLink="/quinto" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="arrow-redo-outline"></ion-icon>
+    Uso de CrudService
+  </ion-button>
+
+  <br>
+
+  
 </ion-content>

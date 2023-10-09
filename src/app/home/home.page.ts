@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  numero1 : any;
+  constructor(private router:Router) {}
 
-  constructor() {}
-
+  abrirSegundaPagina()
+  {
+    if(this.numero1 > 0)
+      this.router.navigate(['/segunda']);
+  }
+  abrirSegundaPagina2()
+  {
+    if(this.numero1 > 0)
+      this.router.navigateByUrl('/segunda');
+  }
+  abrirSegundaPagina3()
+  {
+    if(this.numero1 > 0)
+      this.router.navigate(['/segunda', {valor:'Stanley'}]);
+  }
 }

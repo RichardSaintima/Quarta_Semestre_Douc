@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cuarta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+
+    <p class="ion-padding">
+      Ejercicio 1:
+      Agregar input para el valor y id
+      Almacenando en el Stocage.      
+    </p> 
+
+    <br>
+    
+    <ion-item>
+      <ion-label position="floating">ID</ion-label>
+      <ion-input type="number" [(ngModel)]="id"></ion-input>
+    </ion-item>
+    <br>
+    
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input type="number" [(ngModel)]="valor"></ion-input>
+    </ion-item>
+
+    <br>
+
+ <ion-buttons slot="start">
+  <ion-button (click)="agregar()">
+    <ion-icon slot="start" name="add"></ion-icon>
+    Agregar
+  </ion-button>
+ </ion-buttons>
+  </div>
+  
+</ion-content>

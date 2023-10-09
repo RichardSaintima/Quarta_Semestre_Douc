@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>segunda</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text color="primary" *ngIf="valorParametro">
+    <ion-text color="primary" slot="start">
+      <h1>El valor recibido es {{valorParametro}}</h1>
+    </ion-text>
+    
+  </ion-text>
+  <ion-text color="primary" *ngIf="valorParametro2">
+    <h1>El valor recibido es {{valorParametro2}}</h1>
+  </ion-text>
+  
+</ion-content>

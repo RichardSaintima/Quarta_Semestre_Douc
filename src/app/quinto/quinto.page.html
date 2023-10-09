@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Quinta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+
+    <p class="ion-padding">
+      Ejercicio 1:
+      Agregar input para el valor y id
+      Almacenando en el Stocage.      
+    </p> 
+
+    <br>
+
+      <ion-item>
+        <ion-label position="floating">Ingresar Rut</ion-label>
+        <ion-input type="text"  [(ngModel)]="persona.rut" class="ion-padding"></ion-input>
+      </ion-item>
+      
+      
+      <ion-item>
+        <ion-label position="floating">Ingresar Nombre</ion-label>
+        <ion-input type="text"  [(ngModel)]="persona.nombre" class="ion-padding"></ion-input>
+      </ion-item>
+ 
+      
+      <ion-item>
+        <ion-label position="floating">Ingresar Direccion</ion-label>
+        <ion-input type="text"  [(ngModel)]="persona.direccion" class="ion-padding"></ion-input>
+      </ion-item>
+      
+      
+      <ion-item>
+        <ion-label position="floating">Ingresar Correo</ion-label>
+        <ion-input type="email"  [(ngModel)]="persona.correo" class="ion-padding"></ion-input>
+      </ion-item>
+      
+      
+      <ion-item>
+        <ion-label position="floating">Ingresar telefono</ion-label>
+        <ion-input type="tel"  [(ngModel)]="persona.telefono" class="ion-padding"></ion-input>
+      </ion-item>
+     
+      
+      <ion-item>
+        <ion-label position="floating" >Ingresar Fecha de nacimiento</ion-label>
+        <ion-input type="text"  [(ngModel)]="persona.fecha" class="ion-padding" ></ion-input>
+      </ion-item>
+      
+  </div>
+  
+  <br>
+    <ion-fab vertical="bottom" horizontal="end"  >
+      <ion-fab-button><ion-icon name="code"></ion-icon></ion-fab-button>
+      <ion-fab-list side="start" >
+        <ion-fab-button><ion-icon (click)="agregar()" name="add-outline"></ion-icon></ion-fab-button>
+        <!-- <ion-fab-button><ion-icon  name="add-outline"></ion-icon></ion-fab-button> -->
+        <ion-fab-button><ion-icon (click)="leer()" name="search-outline"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon (click)="eliminar()" name="remove-outline"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon  (click)="lista()"name="list-outline"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="top" >
+        <ion-fab-button><ion-icon (click)="limpiar()" name="trash-outline"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+    
+       
+
+
+</ion-content>

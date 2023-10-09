@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Quinta Listado</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="quinto"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let persona of persona" 
+    [routerLink]="['/quinto/' + persona.rut]"> 
+    
+      <ion-label position="">{{persona.rut}}</ion-label>
+      <ion-label position="">{{persona.nombre}}</ion-label>
+      <ion-label position="">{{persona.correo}}</ion-label>
+  </ion-item>
+</ion-content>
+
