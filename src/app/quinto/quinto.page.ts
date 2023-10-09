@@ -35,6 +35,9 @@ export class QuintoPage implements OnInit {
   }
  
   async agregar () {
+    if (!this.persona) {
+      this.persona = []; 
+    }
     if(!this.persona.rut) {
       this.mensError('Ingrese rut');
     } else if (!this.persona.nombre) {
